@@ -136,7 +136,8 @@ export default function Home() {
     }
   }
   function handleRestart() {
-    setHighScore(count);
+    if (highScore > count) setHighScore(count);
+
     setCount(0);
     setGame(
       shuffleArray(
